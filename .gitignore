@@ -1,0 +1,6 @@
+bzip2_impl
+__test.*
+*.bz1
+*.bin
+*.out
+.DS_Store
