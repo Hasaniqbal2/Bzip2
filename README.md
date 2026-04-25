@@ -1,12 +1,12 @@
 # BZip2 Data Compression - Phase 1
 
 ## Overview
-This repository contains the **Stage 1** implementation of a BZip2-style data compression pipeline. Originally prototyped in pure C, the codebase has been fully refactored into **Modern C++17** (with permission from Dr. Faisal Aslam) to ensure automatic memory management, enhanced safety, and clean modularity.
+This repository contains the **Stage 1** implementation of a BZip2-style data compression pipeline.
 
 ### Phase 1 Features
 1. **Block Division:** Reads arbitrarily large binary files and chunks them into memory-safe blocks based on a configurable `block_size`.
 2. **RLE-1 (Run-Length Encoding):** Implements the strict `[Character][Count]` format to compress consecutive sequences of identical bytes.
-3. **Burrows-Wheeler Transform (BWT):** - **Extra Credit Implemented:** Utilizes a highly optimized **Suffix Array** approach via C++ `std::sort` instead of the memory-heavy matrix rotation approach.
+3. **Burrows-Wheeler Transform (BWT):** Utilizes a highly optimized **Suffix Array** approach via C++ `std::sort` instead of the memory-heavy matrix rotation approach.
 4. **Configuration Manager:** Parses a `config.ini` file to dynamically toggle RLE-1, choose the BWT type, and set chunk sizes without recompiling.
 
 ---
